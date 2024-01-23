@@ -1,0 +1,13 @@
+.sign {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  span {
+    margin: auto;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

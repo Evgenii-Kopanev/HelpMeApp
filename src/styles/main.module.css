@@ -1,0 +1,17 @@
+.helpButton {
+  height: 15rem;
+  width: 15rem;
+  background-color: red;
+  font-size: xx-large;
+}
+.buttonConteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+}

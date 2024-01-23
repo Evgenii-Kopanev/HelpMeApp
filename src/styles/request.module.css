@@ -1,0 +1,18 @@
+.mainConteiner {
+  border: 3px solid pink;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.secondConteiner {
+  border-radius: 10px;
+  border: 3px solid lightblue;
+  height: 15rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

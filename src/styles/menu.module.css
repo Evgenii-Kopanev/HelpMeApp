@@ -1,0 +1,17 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  position: absolute;
+  right: 0%;
+
+  button div {
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+
+    div {
+      margin-left: 10px;
+    }
+  }
+}
