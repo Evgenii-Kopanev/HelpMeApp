@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { helpContext } from "../utilities/contexts";
+import { MainInput } from "./styledComponents/inputs";
 
 export default function CancelAproove(props) {
   const [firstPass, setFirstPass] = useState("");
@@ -25,19 +26,38 @@ export default function CancelAproove(props) {
   };
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Enter password"
-        onChange={(e) => setFirstPass(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="RE ENTER password"
-        onChange={(e) => setSecondaryPass(e.target.value)}
-      />
-      <button disabled={props.counter > 3} onClick={cancel}>
-        cancel
-      </button>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1rem",
+          border: "1px solid pink",
+          padding: "1rem",
+        }}
+      >
+        <MainInput
+          type="text"
+          placeholder="Enter password"
+          onChange={(e) => setFirstPass(e.target.value)}
+        />
+        <MainInput
+          type="text"
+          placeholder="RE ENTER password"
+          onChange={(e) => setSecondaryPass(e.target.value)}
+        />
+        <button
+          style={{
+            width: "80%",
+            border: "1px solid white",
+            fontStyle: "italic",
+          }}
+          disabled={props.counter > 3}
+          onClick={cancel}
+        >
+          cancel
+        </button>
+      </div>
     </div>
   );
 }

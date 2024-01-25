@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { helpContext } from "../utilities/contexts";
 import styles from "../styles/login.module.css";
+import { MainInput } from "../components/styledComponents/inputs";
+import { StyledCentricContainer } from "../components/styledComponents/containers";
+import { H2 } from "../components/styledComponents/titles";
 
 export default function Login(props) {
   const { name, setName, password, setPassword, setId } =
@@ -61,15 +64,15 @@ export default function Login(props) {
   };
 
   return (
-    <div>
-      <div className={styles.sign}>Sign-Up</div>
+    <StyledCentricContainer>
+      <h1 className={styles.sign}>Sign-Up</h1>
       <div className={styles.name}>
         {nameErrorShowed ? (
-          <span style={{ color: "red" }}>wrong name</span>
+          <span style={{ color: "red", fontStyle: "italic" }}>wrong name</span>
         ) : (
           <></>
         )}
-        <input
+        <MainInput
           type="text"
           placeholder="Enter your Name"
           onChange={(e) => setName(e.target.value)}
@@ -77,25 +80,19 @@ export default function Login(props) {
       </div>
       <div className={styles.name}>
         {passErrorShowed ? (
-          <span style={{ color: "red" }}>wrong password</span>
+          <span style={{ color: "red", fontStyle: "italic" }}>
+            wrong password
+          </span>
         ) : (
           <></>
         )}
-        <input
+        <MainInput
           type="text"
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div
-        style={{
-          fontSize: "x-large",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        helpMe
-      </div>
-    </div>
+      <H2>HelpMe Application</H2>
+    </StyledCentricContainer>
   );
 }

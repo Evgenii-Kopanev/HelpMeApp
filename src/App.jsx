@@ -9,10 +9,6 @@ import NavBar from "./components/NavBar";
 import Menu from "./components/menu";
 
 function App() {
-  // const companyInitialValue = {
-  //   companyLogo: "A",
-  //   companyPhone: 101,
-  // };
   const companyList = [
     {
       companyLogo: "A",

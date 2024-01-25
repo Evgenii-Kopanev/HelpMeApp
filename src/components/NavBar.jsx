@@ -11,7 +11,10 @@ export default function NavBar() {
           <div>{company.companyLogo}</div>
           <div>{company.companyPhone}</div>
         </div>
-        <button onClick={() => setIsMenuVisible((prevState) => !prevState)}>
+        <button
+          style={{ marginRight: "1rem" }}
+          onClick={() => setIsMenuVisible((prevState) => !prevState)}
+        >
           menu
         </button>
       </div>

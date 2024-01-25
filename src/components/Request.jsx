@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import styles from "../styles/request.module.css";
 import { helpContext } from "../utilities/contexts";
 import { useParams } from "react-router-dom";
+import { StyledCentricContainer } from "./styledComponents/containers";
+import { H2 } from "./styledComponents/titles";
 
 export default function Request() {
   const { company } = useContext(helpContext);
@@ -25,9 +27,9 @@ export default function Request() {
   return (
     <div className={styles.mainConteiner}>
       <div className={styles.secondConteiner}>
-        <div>{currentCompany}</div>
-        <div>{company.companyPhone}</div>
-        <div>{"CLIENT NAME: " + id}</div>
+        <H2>{currentCompany}</H2>
+        <H2>{company.companyPhone}</H2>
+        <h3 style={{ color: "black" }}>{"CLIENT NAME: " + id}</h3>
       </div>
     </div>
   );

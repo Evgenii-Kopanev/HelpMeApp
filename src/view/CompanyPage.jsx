@@ -10,13 +10,14 @@ export default function CompanyPage() {
   const { id } = useParams();
 
   return (
-    <>
+    <div>
       <Request />
       {cancelShow ? (
         <CancelAproove id={id} counter={counter} setCounter={setCounter} />
       ) : (
         <></>
       )}
+      <hr />
       <button
         onClick={() => setCancelShow((prevState) => !prevState)}
         disabled={counter > 3}
@@ -24,6 +25,6 @@ export default function CompanyPage() {
       >
         CANCEL
       </button>
-    </>
+    </div>
   );
 }
